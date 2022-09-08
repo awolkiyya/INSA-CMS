@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#7857fe;
+    --color-1:#e91e63;
+    --color-2:#f5ae10;
+    --color-3:#09d69c;
+    --bg-dark:#2b2c2f;
+    --main-to-dark-color:var(--main-color);
+    --dark-to-main-color:var(--bg-dark);
+    --shadow-black-100:0 5px 15px rgba(0,0,0,0.1);
+    --shadow-black-300:0 5px 15px rgba(0,0,0,0.3);
+    --black-900:#000000;
+    --black-400:#555555;
+    --black-100:#f7f7f7;
+    --black-000:#ffffff;
+    --black-alpha-100:rgba(0,0,0,0.05);
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight:400;
+    overflow-x: hidden;
+    background-color:#fff;
+    line-height:1.5;
+}
+.hed.navbar-shrink{
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    background-color: var(--main-color);
+    padding: 10px 0;
+    text-align: center;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#fff;
+    padding: 5px 5%;
+   
+}
+@keyframes spin_01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+@keyframes bounceTop_01{
+    0%,100%{
+        transform:translateY(-30px);
+    }
+    50%{
+        transform:translateY(0px);
+
+    }
+}
+@keyframes pulse_01{
+    0%{
+        transform:scale(0.94);
+        box-shadow:0 0 0 0 rgba(255,255,255,0.7);
+    }
+    70%{
+        transform:scale(1);
+        box-shadow:0 0 0 12px rgba(255,255,255,0);
+
+    }
+    100%{
+        transform:scale(0.94);
+        box-shadow:0 0 0 0 rgba(255,255,255,0);
+
+    }
+}
+a{
+    color: white;
+}
+h1{
+    color: white;
+    font-size: 1.6rem;
+}
+span{
+    color: crimson;
+}
+.logo{
+    width:200px;
+    margin-right: 45px;
+}
+.nav_left,.right{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.nav_left ul li{
+    list-style: none;
+    display: inline-block;
+}
+.nav_left ul li a{
+    margin: 0 15px;
+}
+.nav-user-icon{
+    margin-left: 30px;
+
+}
+.nav-user-icon img{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.userName h5{
+    font-size: 1rem;
+    padding-top: 5px;
+    color: teal;
+}
+.online{
+   position: relative;
+}
+.online::after{
+    content: '';
+    width: 10px;
+    height:10px;
+    border: 2px solid green;
+    border-radius: 50%;
+    background:#41db51;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+.user-profile{
+    display: flex;
+    align-items:center;
+}
+.user-profile img{
+    width:45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-profile p{
+    margin-bottom: -5px;
+    font-weight:500;
+    color:#626262;
+}
+.user-profile small{
+    font-size: 12px;
+}
+.setting-menu{
+     position: absolute;
+     width:90%;
+     max-width:250px;
+     background:#fff;
+     box-shadow:0 0 10px rgba(0,0,0,0.4);
+     border-radius:4px;
+     overflow:hidden;
+     top:108%;
+     right:0.4%;
+     text-align:left;
+     max-height:0;
+     transition: max-height 0.7s;
+}
+.setting-menu-height{
+      max-height:330px;
+}
+.user-profile a{
+    font-size: 12px;
+    color:#1876f2;
+    text-decoration:none;
+}
+.setting-menu-inner{
+    padding:20px;
+}
+.setting-menu hr{
+    border:0;
+    height: 1px;
+    background: #9a9a9a;
+    margin: 15px 0;
+}
+.user-profile .i{
+    font-size:20px;
+    margin-right:2rem;
+}
+.home-img img{
+    max-width: 100%;
+    width: 100%;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 32px;
+    animation: bounceTop_01  3s ease infinite;
+    overflow:hidden;
+}
+.home-img{
+    position: relative;
+}
+.home-img .circle{
+    position: absolute;
+    z-index: 1;
+    height: 420px;
+    width: 420px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.home-img .circle::before{
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+    transform-origin: 170px 170px;
+    animation: spin_01 10s linear infinite;
+}
